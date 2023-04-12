@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker build . -t kudu-rpm
+docker buildx build --load --platform linux/arm64 . -t kudu-rpm
 
 KUDU_VERSION=1.15.0
 RELEASE=1
